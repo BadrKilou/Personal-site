@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css"> 
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <nav> 
+        <div class="logo">
+            <span>TR DREAMER</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/" id="home-res">Home</a></li>
+            <li><a href="#" id="about-res">About Me</a></li>
+             </ul>
+    <nav>
+    </header>
+
+     <section class="intro-section">
+    
+    <div class="newsletter">
+        <img src="css/img/undraw_newsletter_vovu.png" alt="">
+    </div>
+</section>
+  <div class="success-msg">
+<% if (messages.success) {%>
+    <div class="flash flash-success"><%= messages.success%></div>
+    <% } %>
+    <div class="green-icon">
+      <img src="css/img/sent.png" alt="">
+    </div>
+</div>
+<div class="return">
+    <a href="/">return to home page</a>
+</div>

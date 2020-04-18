@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css"> 
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <nav> 
+        <div class="logo">
+            <span>TR DREAMER</span>
+        </div>
+    </a>
+        <ul class="nav-links">
+            <li><a href="/" id="home-res">Home</a></li>
+            
+             </ul>
+    <nav>
+    </header>
+
+    <div class="overlay-gsap">
+        <div class="layer"></div>
+        <div class="layer1"></div>
+        <div class="layer2"></div>
+    </div>
+
+     <section class="intro-section">
+    <div class="section-content">
+        <h1>HAVE ANY QUESTIONS ?</h1>
+    </div>
+    <div class="newsletter">
+        <img src="css/img/undraw_newsletter_vovu.png" alt="">
+    </div>
+</section>
+        <br>
+        <div class="form-header">
+            <% if(Object.keys(errors).length === 0) {%>
+            <h2 class="compliment">Send me a message</h2>
+            <% } else { %>
+            <h2 class="errors-heading">Oops There might be a problem on the following :</h2>
+            <ul class="error-list">
+                <% Object.values(errors).forEach(error => { %>
+                <li><% errors.msg %></li>
+                <% }) %>
+            </ul>
+            <% } %>
+        </div>
+       
+    <div class="form-wrapper">
+<form name="form" method="POST" action="/contact" class="form" id="form">
+        <div class="form-control <%=errors.message ? 'form-field-invalid': '' %>">
+            <label for="email">Email</label>
+            <input type="text" name="email" placeholder="Email" id="email" value="<% data.email%>">
+            <%if (errors.email) {%>
+                <div class="error"><%= errors.email.msg %></div>
+                <% }%>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation"></i>
+            <small>Error Message</small>
+        </div>
+
+        <div class="form-control">
+            <label for="lastname">Name</label>
+            <input type="text" name= "name" placeholder="Name" id="name" value="<% data.name%>">
+            <%if (errors.name) { %>
+            <div class="error"><%= errors.name.msg %></div>
+            <% }%>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation"></i>
+            <small>Error Message</small>
+        </div>
+
+        <div class="form-control">
+            <label for="request">Request</label>
+            <input type="text" name="request" placeholder="Request" id="request" value="<% data.request%>">
+            <% if (errors.request){ %>
+            <div class="error"><%= errors.request.msg %></div>
+            <% } %>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation"></i>
+             <small>Error Message</small>
+        </div>
+
+        
+         
+        <div class="form-control">  
+            <div class="container">
+            <div class="card">      
+            <label for="message">Message</label>
+            <textarea name="message" id="text-area"></textarea>
+            <% if(errors.message){ %>
+            <div class="error" id="msg-align"><%= errors.message.msg %></div>
+            <% } %>
+            <div class="error-area"></div>
+        </div>
+    </div>
+    </div>
+
+        <button type="submit" id="cta-submit" value="submit">Send</button>
+</form>
+</div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>  
+    <script src="/css/js/layer.js"></script>
+    <script src="https://kit.fontawesome.com/681756e512.js" crossorigin="anonymous"></script>
+
+    </body>  
+</html>
