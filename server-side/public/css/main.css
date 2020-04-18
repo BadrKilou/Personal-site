@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css?family=Rokkitt|Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Rokkitt|Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Domine&display=swap');
 
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
@@ -361,6 +362,43 @@ small{
     margin: 0 auto;
     font-family: 'Open Sans Condensed', sans-serif;
 }
+.wrong-page{
+    background: #FDFFE5;
+}
+
+.section-404{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    min-height: 60vh;
+    
+    
+}
+.content-404{
+    width: 100%;
+    padding: 40px;
+    
+    
+    
+}
+.content-404 img{
+    width: 550px;
+}
+.not-found{
+    font-family: 'Domine', serif;
+    font-size: 2.4rem;
+}
+.return-home{
+    color: rgb(61, 48, 48);
+    text-decoration: underline;
+    margin-top: 25px;
+}
+
+
+
 
 @media(max-width: 765px){
     .form-section{
@@ -385,5 +423,55 @@ small{
         width: 80%;
         text-align: center;
         font-size: 16px;
+    }
+    .content-404{
+        width: 80%;
+    }
+    .content-404 img{
+        width: 346px;
+    }
+    .section-404{
+        width: 100%;
+    }
+    .not-found{
+        font-size: 1.5em;
+    }
+}
+
+@media(max-width: 625px){
+    .form-section{
+        width: 465px;
+        margin: 0 auto;
+        height: 665px;
+    }
+    .newsletter img{
+        width: 264px;
+        
+    }
+    .newsletter{
+        pointer-events: none;
+        width: 100%;
+        text-align: center;
+    }
+    .form-wrapper{
+        width: 95%;
+        
+    }
+    .success-msg{
+        width: 80%;
+        text-align: center;
+        font-size: 16px;
+    }
+    .content-404{
+        width: 100%;
+    }
+    .content-404 img{
+        width: 246px;
+    }
+    .section-404{
+        width: 100%;
+    }
+    .not-found{
+        font-size: 26px;
     }
 }

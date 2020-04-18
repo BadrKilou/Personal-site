@@ -50,6 +50,11 @@ app.get('/', (req, res) => {
     res.render('content')
 })
 
+app.get('*', (req, res) => {
+    res.status(404).render('404',{
+        name: 'This is not the web page you are looking for.'
+    })
+})
 
 
 
