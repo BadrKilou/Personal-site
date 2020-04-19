@@ -7,11 +7,12 @@ const app = express();
 const Router = require('./routes/contact')
 
 const PORT = process.env.PORT || 3000
-const db = require('./keys/key').mongoURL
+
+const url = process.ev.MONGO_URI || 'mongodb://127.0.0.1:27017/Portfolio'
 
 // Connect Mongodb
 
-mongoose.connect(db, {
+mongoose.connect(url, {
     useUnifiedTopology: true,
     useCreateIndex: true,
     useNewUrlParser: true
