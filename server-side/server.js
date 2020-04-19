@@ -7,7 +7,7 @@ const app = express();
 const Router = require('./routes/contact')
 
 const PORT = process.env.PORT || 3000
-const db = require('./keys/key')
+const db = require('./keys/key').mongoURL
 
 // Connect Mongodb
 
