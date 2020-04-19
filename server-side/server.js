@@ -8,10 +8,10 @@ const Router = require('./routes/contact')
 
 const PORT = process.env.PORT || 3000
 
-
+const url = process.evn.MONGO_URL || 'mongodb://localhost:27017/PortfolioDB'
 // Connect Mongodb
 
-mongoose.connect('mongodb://localhost:27017/PortfolioDB', {
+mongoose.connect(url, {
     useUnifiedTopology: true,
     useCreateIndex: true,
     useNewUrlParser: true
