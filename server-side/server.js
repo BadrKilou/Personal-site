@@ -8,7 +8,7 @@ const Router = require('./routes/contact')
 
 const PORT = process.env.PORT || 3000
 
-const url = process.ev.MONGO_URI || 'mongodb://127.0.0.1:27017/Portfolio'
+const url = process.env.MONGOLAB_URI || 'mongodb://127.0.0.1:27017/Portfolio';
 
 // Connect Mongodb
 
